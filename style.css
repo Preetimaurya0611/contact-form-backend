@@ -1,0 +1,600 @@
+/* GLOBAL */
+body{
+  font-family: "Segoe UI", sans-serif;
+  margin:0;
+  padding-top:70px; /* fixed navbar ke liye */
+}
+
+/* NAVBAR */
+.navbar{
+  background:#fff;
+  padding:6px 0;
+}
+
+.navbar-brand{
+  font-weight:600;
+  font-size:20px;
+}
+
+.navbar-brand img{
+  height:40px;
+  margin-right:8px;
+}
+
+/* NAVBAR GAP FIX */
+.navbar-nav{
+  gap:28px;                 /* ⭐ MAIN GAP BETWEEN ITEMS */
+}
+
+.navbar-nav .nav-link{
+  padding:8px 14px;         /* clickable spacing */
+  font-size:16px;
+}
+
+/* Dropdown menu spacing fix */
+.dropdown-menu{
+  margin-top:10px;
+}
+
+/* ABOUT HERO SECTION */
+.about-hero{
+  height:220px;               /* 🔽 chhota banner */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/library.jpg");
+  background-size: contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  color:#fff;
+}
+
+.about-hero h1{
+  font-size:42px;
+  font-weight:700;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+  .about-hero{
+    height:160px;
+  }
+
+  .about-hero h1{
+    font-size:28px;
+  }
+}
+
+
+/* RESOURCES SECTION */
+.resources-section{
+  background: #f8f9fa;
+}
+
+.resource-card{
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover{
+  transform: translateY(-8px);
+}
+
+.resource-card h5{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* CONNECT WITH US */
+.connect-section{
+  background: #ffffff;
+  padding: 70px 0;
+}
+
+.connect-title{
+  font-size: 32px;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.connect-subtitle{
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.social-links{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.social-icon i{
+  font-size: 20px;
+}
+
+.facebook{ background:#1877f2; }
+.twitter{ background:#1da1f2; }
+.youtube{ background:#ff0000; }
+.instagram{ background:#e4405f; }
+.linkedin{ background:#0a66c2; }
+
+.social-icon:hover{
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+
+/* Contact PAGE HEADER */
+.page-header{ 
+  background: #ed8ec6; 
+  color:#fff; 
+  text-align:center; 
+  padding:20px 0; 
+}
+
+.page-header h1{ 
+  margin:10px; 
+  margin-bottom: 5px;
+}
+
+/* FORM */
+.form-page{ 
+  min-height:100vh; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  padding:30px; 
+}
+
+.form-card{ 
+  background:#fff; 
+  padding:35px; 
+  max-width:900px; 
+  width:100%; 
+  border-radius:15px; 
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.form-title{ 
+  text-align:center; 
+  font-weight:600; 
+  margin-bottom:25px; 
+}
+
+label{ 
+  font-weight:500; 
+  margin-bottom:5px; 
+}
+
+.form-control, .form-select, textarea{ 
+  border-radius:8px; 
+  padding:10px; 
+}
+
+.btn-lg{ 
+  padding:12px; 
+  font-size:18px; 
+}
+
+/* CONTACT Footer */
+.contact-box p{ 
+  font-size:15px; 
+  margin-bottom:10px; 
+}
+
+
+/* ================= FOOTER ================= */
+
+.main-footer{
+  background:#1f355d;
+  color:#ffffff;
+  padding:70px 40px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:60px;
+}
+
+.footer-col h3{
+  margin-bottom:25px;
+  font-size:24px;
+}
+
+.college-name{
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.footer-col p{
+  line-height:1.8;
+  font-size:15px;
+}
+
+.footer-links{
+  list-style:none;
+  padding:0;
+}
+
+.footer-links li{
+  margin-bottom:14px;
+  color:#ffcc00;
+  font-size:17px;
+}
+
+/* SOCIAL */
+.social-links{
+  list-style:none;
+  padding:0;
+}
+
+.social-links li{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+  font-size:18px;
+  color:#ffcc00;
+}
+
+.social-links i{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:18px;
+}
+
+/* Icon Colors */
+.fb{background:#1877f2;}
+.tw{background:#000;}
+.yt{background:#ff0000;}
+.ig{background:#e1306c;}
+.ln{background:#0a66c2;}
+
+.highlight{
+  color:#ffcc00;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  border-top:1px solid #405a88;
+  margin-top:50px;
+  padding-top:20px;
+  font-size:15px;
+}
+
+.footer-bottom p{
+  margin:6px 0;
+}
+
+.campus span{
+  color:#ffcc00;
+  font-weight:bold;
+}
+
+/* Students dropdown width */
+.students-menu{
+  min-width:300px;
+}
+
+/* Dropdown hover effect */
+.dropdown-item{
+  padding:12px 20px;
+  font-size:15px;
+}
+
+.dropdown-item:hover{
+  background:#0d6efd;
+  color:#fff;
+}
+
+/* Navbar spacing */
+.navbar-nav .nav-link{
+  padding:8px 14px;
+  font-weight:500;
+}
+
+/* ================= EXAM ANNOUNCEMENT ================= */
+
+.exam-section{
+  margin-top:100px;
+  max-width:800px;
+}
+
+.exam-title{
+  font-size:36px;
+  font-weight:600;
+}
+
+.exam-list{
+  list-style:none;
+  padding-left:0;
+  margin-top:20px;
+}
+
+.exam-list li{
+  margin-bottom:12px;
+  position:relative;
+  padding-left:25px;
+}
+
+.exam-list li::before{
+  content:"▶";
+  color:#3b6db1;
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+.exam-list a{
+  text-decoration:none;
+  color:#b30000;
+  font-size:20px;
+}
+
+.exam-list a:hover{
+  text-decoration:underline;
+}    
+
+/* ===== STUDENTS DROPDOWN FIX ===== */
+
+.students-dropdown{
+  position:relative;
+}
+
+.students-menu{
+  width:360px;
+  background:#1f365c;
+  padding:0;
+  border-radius:8px;
+  border:none;
+}
+
+.students-left a,
+.has-sub{
+  display:block;
+  padding:14px 20px;
+  color:#fff;
+  font-size:15px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  text-decoration:none;
+  position:relative;
+}
+
+.students-left a:hover,
+.has-sub:hover{
+  background:#162b4d;
+  color:#ffcc00;
+}
+
+/* ===== RIGHT SUBMENU (ANNOUNCEMENTS) ===== */
+
+.has-sub{
+  cursor:pointer;
+}
+
+.has-sub span{
+  position:absolute;
+  right:20px;
+}
+
+.sub-menu{
+  position:absolute;
+  top:0;
+  left:100%;
+  width:260px;
+  background:#223e66;
+  border-radius:8px;
+  display:none;
+}
+
+.has-sub:hover .sub-menu{
+  display:block;
+}
+
+.sub-menu a{
+  display:block;
+  padding:14px 20px;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.sub-menu a:hover{
+  background:#162b4d;
+  color:#ffcc00;
+}
+
+/* ===== GENERAL RESET ===== */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== EXAM ANNOUNCEMENT CARD ===== */
+.exam-announcement {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.exam-announcement h2 {
+    text-align: center;
+    color: #b30000;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ===== TABLE DESIGN ===== */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+thead {
+    background: #2c3e50;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background: #f4f6f8;
+}
+
+tbody tr:hover {
+    background: #eef2f5;
+}
+
+/* ===== NOTE ===== */
+.note {
+    margin-top: 15px;
+    color: #444;
+}
+
+.authority {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .exam-announcement {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* ===== PRINT FRIENDLY ===== */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .exam-announcement {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        color: #000;
+    }
+
+    table {
+        min-width: 100%;
+    }
+}
+
+/* ===== HIDE ALL SUB-MENUS BY DEFAULT ===== */
+.has-sub > .sub-menu {
+    display: none;
+}
+
+/* ===== SHOW FIRST LEVEL ON HOVER ===== */
+.has-sub:hover > .sub-menu {
+    display: block;
+}
+
+/* ===== NESTED SUB-MENU (Student Events) ===== */
+.has-sub .has-sub > .sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/* ===== SHOW Makers / Engineer / Freshers ONLY ON Student Events HOVER ===== */
+.has-sub .has-sub:hover > .sub-menu {
+    display: block;
+}
+
+/* ===== MENU BASE ===== */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.menu > li {
+  position: relative;
+  padding: 15px 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu > li:hover {
+  background: #444;
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .footer-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:576px){
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* RESPONSIVE */
+@media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }

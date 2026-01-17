@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HSC Examination Form | ICLES College</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  background:#f4f6f9;
+  font-family:Segoe UI, sans-serif;
+}
+.page-wrap{
+  padding:40px 15px;
+}
+.instructions{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.instructions h5{
+  font-weight:600;
+  margin-bottom:15px;
+}
+.instructions ul{
+  padding-left:18px;
+}
+.instructions li{
+  margin-bottom:10px;
+  font-size:15px;
+}
+.form-card{
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.form-title{
+  text-align:center;
+  font-weight:600;
+  margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container page-wrap">
+  <div class="row g-4">
+
+    <!-- LEFT SIDE : INSTRUCTIONS -->
+    <div class="col-lg-4">
+      <div class="instructions">
+        <h5>Instructions for Examination Registration</h5>
+        <ul>
+          <li>To apply for Examination, you must verify using <strong>OTP</strong>.</li>
+          <li>Enter <strong>RMN (Registered Mobile Number)</strong> or <strong>RE (Registered Email)</strong>.</li>
+          <li>Click on the <strong>[Send OTP]</strong> button.</li>
+          <li>If your mobile number is not registered, contact the institute for assistance.</li>
+          <li>(Only for students registered from academic year <strong>2020–21 onwards</strong>)</li>
+          <li>System will generate a <strong>unique OTP (One Time Password)</strong>.</li>
+          <li>Enter the received OTP and click on <strong>[Verify OTP]</strong>.</li>
+          <li>After verification, the <strong>HSC Examination Form</strong> will be displayed.</li>
+          <li>Fill all required details and pay the corresponding examination fee.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE : OTP + FORM -->
+    <div class="col-lg-8">
+      <div class="form-card">
+
+        <h2 class="form-title text-success">HSC Examination</h2>
+
+        <!-- OTP SECTION -->
+        <div id="otpSection">
+          <div class="mb-3">
+            <label class="form-label">Registered Mobile Number / Email</label>
+            <input type="text" class="form-control" placeholder="Enter RMN or RE" required>
+          </div>
+          <button class="btn btn-primary w-100 mb-3" onclick="sendOTP()">Send OTP</button>
+
+          <div id="otpBox" style="display:none;">
+            <label class="form-label">Enter OTP</label>
+            <input type="text" class="form-control mb-3" placeholder="Enter OTP">
+            <button class="btn btn-success w-100" onclick="verifyOTP()">Verify OTP</button>
+          </div>
+        </div>
+
+        <!-- HSC FORM -->
+        <form id="hscForm" style="display:none;">
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <label class="form-label">Student Full Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Seat / Roll Number</label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Select Stream</label>
+              <select class="form-select" required>
+                <option selected disabled>Select Stream</option>
+                <option>Science</option>
+                <option>Commerce</option>
+                <option>Arts</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Subjects Appearing For</label>
+              <input type="text" class="form-control" placeholder="Enter subjects" required>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-success btn-lg w-100">
+                Submit Examination Form
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- SUCCESS -->
+        <div id="successMsg" style="display:none;" class="text-center mt-4">
+          <h4 class="text-success">HSC Examination Form Submitted Successfully ✅</h4>
+          <p>Please proceed for fee payment at the institute.</p>
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function sendOTP(){
+  document.getElementById("otpBox").style.display="block";
+  alert("OTP sent successfully (demo)");
+}
+
+function verifyOTP(){
+  document.getElementById("otpSection").style.display="none";
+  document.getElementById("hscForm").style.display="block";
+}
+
+document.getElementById("hscForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  this.style.display="none";
+  document.getElementById("successMsg").style.display="block";
+});
+</script>
+
+</body>
+</html>

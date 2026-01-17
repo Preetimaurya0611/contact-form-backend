@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NEP 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ================= INTERNAL CSS (ALL IN ONE) ================= -->
+<style>
+/* -------- COMMON -------- */
+body{
+  background:#f4f6fb;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.section-title{
+  margin:50px 0 25px;
+  font-weight:bold;
+  text-align:center;
+}
+
+/* -------- FOOTER -------- */
+.main-footer{
+  background:#1f355d;
+  color:#fff;
+  padding:70px 40px 30px;
+  margin-top:80px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:50px;
+}
+
+.footer-col h3{
+  margin-bottom:20px;
+}
+
+.college-name{
+  font-weight:bold;
+  font-size:18px;
+}
+
+.footer-links,
+.social-links{
+  list-style:none;
+  padding:0;
+}
+
+.footer-links li{
+  margin-bottom:12px;
+  color:#ffcc00;
+}
+
+.social-links li{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+  color:#ffcc00;
+}
+
+.social-links i{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.fb{background:#1877f2;}
+.tw{background:#000;}
+.yt{background:#ff0000;}
+.ig{background:#e1306c;}
+.ln{background:#0a66c2;}
+
+.highlight{
+  color:#ffcc00;
+}
+
+.footer-bottom{
+  border-top:1px solid #415a88;
+  margin-top:40px;
+  padding-top:20px;
+  text-align:center;
+  font-size:14px;
+}
+
+.campus span{
+  color:#ffcc00;
+  font-weight:bold;
+}
+
+/* -------- RESPONSIVE -------- */
+@media(max-width:992px){
+  .footer-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:576px){
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SYLLABUS ================= -->
+<h2 class="section-title text-primary">NEP 2026 – Detailed Subject Syllabus</h2>
+
+<div class="accordion" id="syllabusAccordion">
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fy">
+      First Year (FY)
+    </button>
+  </h2>
+  <div id="fy" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <ul>
+        <li>English Communication</li>
+        <li>Environmental Studies</li>
+        <li>Digital Literacy</li>
+        <li>Basic Mathematics</li>
+        <li>Value Education</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sy">
+      Second Year (SY)
+    </button>
+  </h2>
+  <div id="sy" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul>
+        <li>Major Subject – I</li>
+        <li>Minor Subject – I</li>
+        <li>Skill Enhancement</li>
+        <li>Internship</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ty">
+      Third Year (TY)
+    </button>
+  </h2>
+  <div id="ty" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <ul>
+        <li>Major Subject – II</li>
+        <li>Minor Subject – II</li>
+        <li>Research Project</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ================= MAJOR MINOR ================= -->
+<h2 class="section-title text-success">NEP Major – Minor Selection</h2>
+
+<div class="card p-4 shadow">
+<form id="majorMinorForm">
+  <input class="form-control mb-3" placeholder="Student Name" required>
+  <select class="form-select mb-3" required>
+    <option disabled selected>Select Major</option>
+    <option>Computer Science</option>
+    <option>IT</option>
+    <option>Commerce</option>
+  </select>
+  <select class="form-select mb-3" required>
+    <option disabled selected>Select Minor</option>
+    <option>Mathematics</option>
+    <option>Economics</option>
+  </select>
+  <button class="btn btn-success w-100">Submit</button>
+</form>
+</div>
+
+<div id="mmSuccess" class="text-center text-success mt-3" style="display:none;">
+  <h4>Major–Minor Submitted Successfully ✅</h4>
+</div>
+
+<!-- ================= ABC CREDIT ================= -->
+<h2 class="section-title text-primary">Academic Bank of Credits (ABC)</h2>
+
+<div class="card p-4 shadow">
+  <input id="credits" type="number" class="form-control mb-3" placeholder="Enter Credits">
+  <button onclick="calculateABC()" class="btn btn-primary w-100">Calculate</button>
+  <div id="abcResult" class="text-center mt-3"></div>
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+<div class="container footer-grid">
+
+<div class="footer-col">
+<h3>Contact</h3>
+<p class="college-name">ICLES' Motilal Jhunjhunwala College</p>
+<p>ICLES' Motilal Jhunjhunwala College , <br>
+  of Arts, Science and Commerce <br>
+  Plot.No 53, Amlendu Roy Marg <br>
+  Sector 9A, Vashi Navi Mumbai 400 703. India</p>
+<p>Email: <span class="highlight">info@iclescollege.edu.in</span></p>
+</div>
+
+<div class="footer-col">
+<h3>Academics</h3>
+<ul class="footer-links">
+<li>Bachelors</li>
+<li>Masters</li>
+<li>Ph.D</li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h3>Connect with us</h3>
+<ul class="social-links">
+<li><i class="fab fa-facebook-f fb"></i> Facebook</li>
+<li><i class="fab fa-youtube yt"></i> Youtube</li>
+<li><i class="fab fa-instagram ig"></i> Instagram</li>
+<li><i class="fab fa-linkedin-in ln"></i> Linkedin</li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h3>Enquiry</h3>
+<p><span class="highlight">admissions@mes.ac.in</span></p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p class="campus"><span>VASHI</span></p>
+</div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById("majorMinorForm").addEventListener("submit",function(e){
+e.preventDefault();
+this.style.display="none";
+document.getElementById("mmSuccess").style.display="block";
+});
+
+function calculateABC(){
+let c=document.getElementById("credits").value;
+let r=c>=120?"Degree":c>=80?"Diploma":c>=40?"Certificate":"Not Eligible";
+document.getElementById("abcResult").innerHTML="<h4>"+r+"</h4>";
+}
+</script>
+
+</body>
+</html>
