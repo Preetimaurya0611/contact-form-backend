@@ -501,73 +501,71 @@ tbody tr:hover {
     display: block;
 }
 
-/* ================= STUDENTS DROPDOWN ================= */
+/* ============ STUDENTS DROPDOWN (FINAL) ============ */
+
+.students-dropdown{
+  position: relative;
+}
 
 /* MAIN MENU */
 .students-menu{
-  display:none;
-  position:absolute;
-  top:100%;
-  left:0;
-  width:320px;
-  background:#1f365c;
-  border-radius:8px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 320px;
+  background: #1f365c;
+  border-radius: 8px;
+  z-index: 500;
 }
 
 .students-dropdown:hover .students-menu{
-  display:block;
+  display: block;
 }
 
-/* NORMAL MENU ITEMS */
+/* NORMAL LINKS */
 .students-menu > a{
-  display:block;
-  padding:14px 20px;
-  color:#fff;
-  text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,.15);
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
-/* SUBMENU TITLE ONLY */
+/* SUBMENU TITLE */
 .sub-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 20px;
-  color:#fff;
-  cursor:pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .students-menu a:hover{
-  background:#162b4d;
-  color:#ffcc00;
-}
-
-/* SUB MENU HOLDER */
-.has-sub{
-  position:relative;
+  background: #162b4d;
+  color: #ffcc00;
 }
 
 /* SUB MENU */
+.has-sub{
+  position: relative;
+}
+
 .sub-menu{
-  display:none;
-  position:absolute;
-  top:0;
-  left:100%;
-  width:260px;
-  background:#223e66;
-  border-radius:8px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 260px;
+  background: #223e66;
+  border-radius: 8px;
+  z-index: 999;
 }
 
-/* SHOW ON HOVER */
 .has-sub:hover > .sub-menu{
-  display:block;
-}
-
-/* SUB MENU LINKS */
-.sub-menu a{
-  justify-content:flex-start;
-}
-
+  display: block;
+}*
 
 /* ================= FACULTY DROPDOWN ================= */
 
@@ -809,6 +807,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
