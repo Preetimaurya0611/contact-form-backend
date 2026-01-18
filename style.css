@@ -577,6 +577,50 @@ tbody tr:hover {
   background: #444;
 }
 
+/* ===== FACULTY DROPDOWN (FINAL) ===== */
+
+.faculty-dropdown{
+  position: relative;
+}
+
+/* hidden by default (Bootstrap override) */
+.faculty-menu{
+  display: none !important;
+  width: 280px;
+  background: #1f365c;
+  padding: 0;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* links */
+.faculty-menu a{
+  display: block;
+  padding: 14px 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  transition: 0.3s;
+}
+
+.faculty-menu a:last-child{
+  border-bottom: none;
+}
+
+/* hover */
+.faculty-menu a:hover{
+  background: #162b4d;
+  color: #ffcc00;
+}
+
+/* show on hover */
+.faculty-dropdown:hover > .faculty-menu{
+  display: block !important;
+}
 
 
 
@@ -598,3 +642,4 @@ tbody tr:hover {
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
