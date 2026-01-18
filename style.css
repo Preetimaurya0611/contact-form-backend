@@ -294,12 +294,6 @@ label{
   font-weight:bold;
 }
 
-/* Navbar spacing */
-.navbar-nav .nav-link{
-  padding:8px 14px;
-  font-weight:500;
-}
-
 /* ================= EXAM ANNOUNCEMENT ================= */
 
 .exam-section{
@@ -751,6 +745,16 @@ textarea:focus{
   }
 }
 
+/* ===== FINAL FIX FOR FORMS DROPDOWN ===== */
+
+.dropdown-menu{
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.dropdown-menu li{
+  list-style: none !important;
+}
 
 
 /* RESPONSIVE */
@@ -769,6 +773,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
