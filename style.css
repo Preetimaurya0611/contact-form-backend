@@ -556,8 +556,7 @@ tbody tr:hover {
 .sub-menu{
   display: none;
   margin-left: 20px;
-  margin-bottom: 8px;
-  width: 260px;
+  margin-top: 6px;
   background: #223e66;
   border-radius: 8px;
 }
@@ -806,6 +805,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
