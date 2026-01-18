@@ -501,13 +501,13 @@ tbody tr:hover {
     display: block;
 }
 
-/* ================= STUDENTS DROPDOWN – FINAL & CLEAN ================= */
+/* ================= STUDENTS DROPDOWN ================= */
 
 .students-dropdown{
   position: relative;
 }
 
-/* main dropdown */
+/* MAIN MENU */
 .students-menu{
   display: none;
   position: absolute;
@@ -516,68 +516,56 @@ tbody tr:hover {
   width: 320px;
   background: #1f365c;
   border-radius: 8px;
-  padding: 0;
   z-index: 500;
-  overflow: visible;
 }
 
-/* items */
-.students-menu a,
-.students-menu .has-sub{
+.students-dropdown:hover > .students-menu{
+  display: block;
+}
+
+/* ITEMS */
+.students-menu a{
   display: block;
   padding: 14px 20px;
-  color: #ffffff;
+  color: #fff;
   font-size: 15px;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-/* hover */
-.students-menu a:hover,
-.students-menu .has-sub:hover{
-  background: #162b4d;
-  color: #ffcc00;
+.students-menu a:hover{
+  background:#162b4d;
+  color:#ffcc00;
 }
 
-/* show main dropdown */
-.students-dropdown:hover > .students-menu{
-  display: block;
-}
-
-/* ================= SUB MENU (RIGHT SIDE) ================= */
+/* ================= SUB MENU ================= */
 
 .has-sub{
   position: relative;
-  cursor: pointer;
 }
 
-.has-sub span{
-  right: 14px;
-}
-
-/* ===== STUDENTS SUBMENU – FINAL SAFE FIX ===== */
-
+/* LEFT SIDE SUBMENU – PERFECT */
 .sub-menu{
   display: none;
   position: absolute;
   top: 0;
-  right: 100%;          /* ⭐ ALWAYS LEFT SIDE */
+  left: 100%;          /* 🔥 RIGHT SIDE OPEN */
+  margin-left: 2px;
   width: 260px;
   background: #223e66;
   border-radius: 8px;
   z-index: 999;
-  overflow: visible;
 }
 
-
+/* SHOW SUBMENU */
 .has-sub:hover > .sub-menu{
   display: block;
 }
 
+/* SUB ITEMS */
 .sub-menu a{
-  display: block;
   padding: 14px 20px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .sub-menu a:hover{
@@ -826,6 +814,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
