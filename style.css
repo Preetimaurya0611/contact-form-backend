@@ -513,7 +513,7 @@ tbody tr:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 360px;
+  width: 320px;
   background: #1f365c;
   border-radius: 8px;
   padding: 0;
@@ -815,6 +815,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
