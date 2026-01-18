@@ -567,27 +567,6 @@ tbody tr:hover {
   display: block;
 }*
 
-/* ===== STUDENTS MENU OVERRIDE FIX ===== */
-
-.students-menu a{
-  text-decoration: none !important;
-}
-
-.students-menu .sub-title{
-  text-decoration: none !important;
-}
-
-.students-menu span{
-  position: static !important;
-  float: none !important;
-}
-
-/* stop navbar styles leaking */
-.students-menu,
-.students-menu *{
-  box-sizing: border-box;
-}
-
 /* ================= FACULTY DROPDOWN ================= */
 
 .faculty-dropdown{
@@ -828,6 +807,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
