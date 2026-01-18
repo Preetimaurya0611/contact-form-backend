@@ -341,87 +341,7 @@ label{
 .exam-list a:hover{
   text-decoration:underline;
 }    
-/* ================= STUDENTS DROPDOWN – FINAL ================= */
-
-.students-dropdown{
-  position: relative;
-}
-
-/* main students menu */
-.students-menu{
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 360px;
-  background: #1f365c;
-  border-radius: 8px;
-  padding: 0;
-  z-index: 300;
-}
-
-/* students items */
-.students-menu a,
-.students-menu .has-sub{
-  display: block;
-  padding: 14px 20px;
-  color: #ffffff;
-  font-size: 15px;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-
-/* hover effect */
-.students-menu a:hover,
-.students-menu .has-sub:hover{
-  background: #162b4d;
-  color: #ffcc00;
-}
-
-/* open on hover */
-.students-dropdown:hover > .students-menu{
-  display: block;
-}
-
-/* ================= STUDENTS SUB MENU ================= */
-
-.has-sub{
-  position: relative;
-  cursor: pointer;
-}
-
-.has-sub span{
-  position: absolute;
-  right: 20px;
-}
-
-/* right side submenu */
-.sub-menu{
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 260px;
-  background: #223e66;
-  border-radius: 8px;
-}
-
-.has-sub:hover > .sub-menu{
-  display: block;
-}
-
-.sub-menu a{
-  padding: 14px 20px;
-  display: block;
-  color: #fff;
-}
-
-.sub-menu a:hover{
-  background:#162b4d;
-  color:#ffcc00;
-}
-
-
+cc
 
 /* ===== RIGHT SUBMENU (ANNOUNCEMENTS) ===== */
 
@@ -608,6 +528,86 @@ tbody tr:hover {
   background: #444;
 }
 
+/* ================= STUDENTS DROPDOWN – FINAL & CLEAN ================= */
+
+.students-dropdown{
+  position: relative;
+}
+
+/* main dropdown */
+.students-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 360px;
+  background: #1f365c;
+  border-radius: 8px;
+  padding: 0;
+  z-index: 500;
+}
+
+/* items */
+.students-menu a,
+.students-menu .has-sub{
+  display: block;
+  padding: 14px 20px;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* hover */
+.students-menu a:hover,
+.students-menu .has-sub:hover{
+  background: #162b4d;
+  color: #ffcc00;
+}
+
+/* show main dropdown */
+.students-dropdown:hover > .students-menu{
+  display: block;
+}
+
+/* ================= SUB MENU (RIGHT SIDE) ================= */
+
+.has-sub{
+  position: relative;
+  cursor: pointer;
+}
+
+.has-sub span{
+  position: absolute;
+  right: 20px;
+}
+
+.sub-menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 260px;
+  background: #223e66;
+  border-radius: 8px;
+}
+
+.has-sub:hover > .sub-menu{
+  display: block;
+}
+
+.sub-menu a{
+  display: block;
+  padding: 14px 20px;
+  color: #ffffff;
+}
+
+.sub-menu a:hover{
+  background:#162b4d;
+  color:#ffcc00;
+}
+
+
 /* ================= FACULTY DROPDOWN ================= */
 
 .faculty-dropdown{
@@ -661,6 +661,7 @@ tbody tr:hover {
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
