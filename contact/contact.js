@@ -1,5 +1,5 @@
 // contact.js
-// Exam-safe demo submit (No backend required)
+// Frontend-only submit (GitHub Pages compatible)
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -12,17 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault();   // Page reload stop
+    e.preventDefault();   // stop page reload
 
-    // Show submitting message
     msg.innerText = "Submitting...";
+    msg.style.color = "black";
 
-    // Fake delay for demo (looks professional)
     setTimeout(function () {
-      msg.innerText = "Form submitted successfully! (Demo)";
+      msg.innerText = "Form submitted successfully!";
       msg.style.color = "green";
       form.reset();
-    }, 1000);
+    }, 800);
   });
 
 });
