@@ -297,19 +297,6 @@ label{
   font-weight:bold;
 }
 
-/* Students dropdown width */
-/* Students dropdown items only */
-.students-menu .dropdown-item{
-  padding:12px 20px;
-  font-size:15px;
-}
-
-.students-menu .dropdown-item:hover{
-  background:#0d6efd;
-  color:#fff;
-}
-
-
 /* Navbar spacing */
 .navbar-nav .nav-link{
   padding:8px 14px;
@@ -388,6 +375,21 @@ label{
   background:#162b4d;
   color:#ffcc00;
 }
+
+/* ===== STUDENTS DROPDOWN OPEN ON HOVER ===== */
+
+.students-menu{
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+}
+
+.students-dropdown:hover > .students-menu{
+  display: block !important;
+}
+
 
 /* ===== RIGHT SUBMENU (ANNOUNCEMENTS) ===== */
 
@@ -639,5 +641,6 @@ tbody tr:hover {
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
