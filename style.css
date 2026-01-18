@@ -518,37 +518,22 @@ tbody tr:hover {
   background: #1f365c;
   border-radius: 8px;
   z-index: 500;
-  display: flex;
   flex-direction: column;
 }
 
 .students-dropdown:hover .students-menu{
-  display: block;
+  display: flex;
 }
 
 /* NORMAL LINKS */
-.students-menu > a{
-  display: block;
+.students-menu a,
+.sub-title{
   padding: 14px 20px;
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
-/* SUBMENU TITLE */
-.sub-title{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.students-menu a:hover{
-  background: #162b4d;
-  color: #ffcc00;
-}
 
 /* SUB MENU */
 .has-sub{
@@ -563,7 +548,6 @@ tbody tr:hover {
   min-width: 280px;
   background: #223e66;
   border-radius: 8px;
-  z-index: 600;
 }
 
 .has-sub:hover > .sub-menu{
@@ -810,6 +794,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
