@@ -518,6 +518,7 @@ tbody tr:hover {
   border-radius: 8px;
   padding: 0;
   z-index: 500;
+  overflow: visible;
 }
 
 /* items */
@@ -559,10 +560,11 @@ tbody tr:hover {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: calc(100% - 8px);  /* ⭐ GAP FIX */
   width: 260px;
   background: #223e66;
   border-radius: 8px;
+  z-index: 999;
 }
 
 .has-sub:hover > .sub-menu{
@@ -798,6 +800,12 @@ textarea:focus{
   }
 }
 
+@media (max-width: 1200px){
+  .sub-menu{
+    left: auto;
+    right: 100%;
+  }
+}
 
 /* RESPONSIVE */
 @media(max-width:992px){
@@ -815,6 +823,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
