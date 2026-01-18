@@ -1,21 +1,28 @@
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
+// contact.js
+// Exam-safe demo submit (No backend required)
 
-  const formData = new FormData(this);
+document.addEventListener("DOMContentLoaded", function () {
 
-  try {
-    const res = await fetch("/contact", {
-      method: "POST",
-      body: formData
-    });
+  const form = document.getElementById("contactForm");
+  const msg = document.getElementById("msg");
 
-    if (!res.ok) throw new Error("Server error");
-
-    document.getElementById("msg").innerText = "Form submitted successfully!";
-    this.reset();
-
-  } catch (err) {
-    document.getElementById("msg").innerText = "Server error! Backend not reachable";
+  if (!form) {
+    console.error("contactForm not found");
+    return;
   }
-});
 
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();   // Page reload stop
+
+    // Show submitting message
+    msg.innerText = "Submitting...";
+
+    // Fake delay for demo (looks professional)
+    setTimeout(function () {
+      msg.innerText = "Form submitted successfully! (Demo)";
+      msg.style.color = "green";
+      form.reset();
+    }, 1000);
+  });
+
+});
