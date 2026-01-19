@@ -515,7 +515,7 @@ tbody tr:hover {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 700px;
+  width: 620px;
   display: grid;
   grid-template-columns: 1fr 1fr; 
   background: #1f365c;
@@ -540,7 +540,7 @@ tbody tr:hover {
 
 /* ROW FIX */
 .mega-col li{
-  height: 52px;
+  height: 44px;
   display: flex;
   padding-right: 30px;
   align-items: center;
@@ -551,10 +551,10 @@ tbody tr:hover {
 /* LINKS */
 .mega-col a{
   width: 100%;
-  padding: 0 20px;
+  padding: 0 16px;
   color: #fff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* ACTIVE (YELLOW TEXT) */
@@ -595,7 +595,7 @@ tbody tr:hover {
 
 /* SUB MENU ROW */
 .sub-menu li{
-  height: 52px;
+  height: 44px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(255,255,255,0.15);
@@ -603,11 +603,11 @@ tbody tr:hover {
 
 /* SUB MENU LINK */
 .sub-menu a{
-  padding: 0 20px;
+  padding: 0 16px;
   width: 100%;
   color: #fff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* SHOW SUB MENU */
@@ -850,6 +850,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
