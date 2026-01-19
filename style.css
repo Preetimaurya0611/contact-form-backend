@@ -502,43 +502,113 @@ tbody tr:hover {
     display: block;
 }
 
-/* ============ STUDENTS DROPDOWN (FINAL) ============ */
+/* ============ STUDENTS MEGA DROPDOWN (FINAL & CLEAN) ============ */
 
 .students-dropdown{
   position: relative;
 }
 
-/* MAIN MENU */
-.students-menu{
-  display: none;
+/* MAIN MEGA MENU */
+.students-mega{
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
+  width: 520px;
   background: #1f365c;
   border-radius: 8px;
-  z-index: 500;
+  display: none;
+  overflow: visible;
+  z-index: 999;
 }
 
-/* show on hover */
-.students-dropdown:hover .students-menu{
+/* SHOW MAIN MENU */
+.students-dropdown:hover .students-mega{
   display: block;
 }
 
-/* NORMAL LINKS */
-.students-menu a{
-  diplay: block;
-  padding: 14px 20px;
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.15);
+/* LEFT COLUMN */
+.mega-col{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* hover */
-.students-menu a:hover{
-  background: #162b4d;
+/* ROW FIX */
+.mega-col li{
+  height: 52px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* LINKS */
+.mega-col a{
+  width: 100%;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ACTIVE (YELLOW TEXT) */
+.mega-col .active > a{
   color: #ffcc00;
 }
+
+/* HOVER */
+.mega-col li:hover{
+  background: #162b4d;
+}
+
+.mega-col li:hover > a{
+  color: #ffcc00;
+}
+
+/* ============ SUB MENU (RIGHT SIDE) ============ */
+
+.has-sub > a::after{
+  content: "›";
+  float: right;
+}
+
+/* SUB MENU BOX */
+.sub-menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 260px;
+  height: 100%;
+  background: #223f6d;
+  border-radius: 0 8px 8px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SUB MENU ROW */
+.sub-menu li{
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* SUB MENU LINK */
+.sub-menu a{
+  padding: 0 20px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* SHOW SUB MENU */
+.has-sub:hover .sub-menu{
+  display: block;
+}
+
 
 /* ================= FACULTY DROPDOWN ================= */
 
@@ -780,6 +850,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
