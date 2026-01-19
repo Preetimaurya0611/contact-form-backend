@@ -472,7 +472,7 @@ tbody tr:hover {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 680px;
+  width: 380px;
   display: none;
   background: #1f365c;
   border-radius: 10px;
@@ -503,7 +503,7 @@ tbody tr:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 48px;
+  height: 42px;
   padding: 0 20px;
   color: #ffffff !important;
   text-decoration: none !important;
@@ -520,6 +520,7 @@ tbody tr:hover {
 .students-mega .mega-col > li.has-sub > a::after{
   content: "›";
   color: #ffcc00;
+  font-size: 18px;
 }
 
 /* SUB MENU */
@@ -788,6 +789,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
