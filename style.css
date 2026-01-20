@@ -756,6 +756,43 @@ textarea:focus{
   display: block;
 }   
 
+/* GPAY PAYMENT QR */
+.pay-wrapper{
+  position: relative;
+  display: inline-block;
+}
+
+.qr-popup{
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+.qr-popup img{
+  width: 100%;
+  border-radius: 8px;
+}
+
+.qr-popup .upi-text{
+  font-weight: 600;
+  margin: 8px 0 4px;
+  font-size: 14px;
+}
+
+/* SHOW QR ON HOVER */
+.pay-wrapper:hover .qr-popup{
+  display: block;
+}
+
 
 /* ================= REQUIRED STAR ================= */
 
@@ -793,6 +830,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
