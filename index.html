@@ -477,7 +477,7 @@ body {
       </a>
 
       <a href="#" class="social-icon twitter">
-    ]    <i class="fab fa-twitter"></i><span>Twitter</span>
+        <i class="fab fa-twitter"></i><span>Twitter</span>
       </a>
 
       <a href="#" class="social-icon youtube">
@@ -496,20 +496,23 @@ body {
   </div>
 </section>
 
-<!-- ================= PAY FEES MODAL ================= -->
+<!-- ================= GPAY FEES MODAL ================= -->
 <div id="payModal" class="pay-modal">
   <div class="pay-card">
-    <span class="close-btn" onclick="closePayModal()">×</span>
 
     <h3>Pay Fees via UPI</h3>
 
-    <img src="images/gpay-qr.jpeg" alt="GPay QR">
+    <div class="qr-wrapper">
+      <span class="qr-close" onclick="closePayModal()">×</span>
+      <img src="images/gpay-qr.jpeg" alt="GPay QR">
+    </div>
 
     <p class="upi-id">
       <strong>UPI ID:</strong> preetimaurya236@okaxis
     </p>
 
     <small>Scan to pay with any UPI app</small>
+
   </div>
 </div>
 
@@ -760,6 +763,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </body>
 </html>
+
 
 
 
