@@ -819,6 +819,35 @@ textarea:focus{
   to{ transform: scale(1); opacity:1 }
 }
 
+/* ================= QR SCANNER CORNER CLOSE ================= */
+
+.qr-wrapper{
+  position: relative;      /* 🔥 SABSE IMPORTANT */
+  display: inline-block;
+}
+
+.qr-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 34px;
+  height: 34px;
+  background: #ffffff;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.qr-close:hover{
+  background: #f2f2f2;
+}
+
 
 /* ================= REQUIRED STAR ================= */
 
@@ -856,6 +885,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
