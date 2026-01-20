@@ -409,13 +409,28 @@ body {
       </div>
 
       <!-- Online Fee Payment -->
-      <div class="col-md-4">
-        <div class="resource-card">
-          <h5>💳 Online Fee Payment Gateway</h5>
-          <p>Pay admission and examination fees online.</p>
-          <a href="#" class="btn btn-outline-success btn-sm">Pay Fees</a>
-        </div>
+<div class="col-md-4">
+  <div class="resource-card payment-card">
+
+    <h5>💳 Online Fee Payment Gateway</h5>
+    <p>Pay admission and examination fees online.</p>
+
+    <div class="pay-wrapper">
+      <a href="#" class="btn btn-outline-success btn-sm">
+        Pay Fees
+      </a>
+
+      <!-- QR POPUP -->
+      <div class="qr-popup">
+        <img src="gpay-qr.png" alt="GPay QR Code">
+        <p class="upi-text">UPI ID: preetimaurya236@okaxis</p>
+        <small>Scan to pay with any UPI app</small>
       </div>
+    </div>
+
+  </div>
+</div>
+
 
       <!-- ICLES ASK Portal -->
       <div class="col-md-4">
@@ -713,6 +728,7 @@ document.addEventListener("keydown", function (event) {
 </script>
 </body>
 </html>
+
 
 
 
