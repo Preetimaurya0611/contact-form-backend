@@ -78,6 +78,7 @@ body{
   text-align: center;
   height: 100%;
   transition: transform 0.3s ease;
+  overflow: visbile;
 }
 
 .resource-card:hover{
@@ -757,12 +758,13 @@ textarea:focus{
 }   
 
 /* GPAY PAYMENT QR */
+
 .pay-wrapper{
   position: relative;
   display: inline-block;
 }
 
-.qr-popup{
+.gpay-qr-popup{
   position: absolute;
   top: 120%;
   left: 50%;
@@ -774,22 +776,22 @@ textarea:focus{
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   text-align: center;
   display: none;
-  z-index: 1000;
+  z-index: 3000;
 }
 
-.qr-popup img{
+.gpay-qr-popup img{
   width: 100%;
   border-radius: 8px;
 }
 
-.qr-popup .upi-text{
+.gpay-qr-popup .upi-text{
   font-weight: 600;
   margin: 8px 0 4px;
   font-size: 14px;
 }
 
 /* SHOW QR ON HOVER */
-.pay-wrapper:hover .qr-popup{
+.pay-wrapper:hover .gapy-qr-popup{
   display: block;
 }
 
@@ -830,6 +832,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
