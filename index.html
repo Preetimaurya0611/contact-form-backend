@@ -747,16 +747,20 @@ function closePayModal(){
   document.getElementById("payModal").style.display = "none";
 }
 
-// BACKGROUND CLICK SE PAY MODAL CLOSE
-document.getElementById("payModal").addEventListener("click", function(e){
-  if(e.target === this){
-    closePayModal();
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const payModal = document.getElementById("payModal");
+
+  payModal.addEventListener("click", function(e){
+    if(e.target === payModal){
+      closePayModal();
+    }
+  });
 });
   
 </script>
 </body>
 </html>
+
 
 
 
