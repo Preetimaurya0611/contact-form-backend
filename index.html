@@ -416,7 +416,7 @@ body {
     <p>Pay admission and examination fees online.</p>
 
     <div class="pay-wrapper">
-      <a href="#" class="btn btn-outline-success btn-sm">
+      <a href="#" class="btn btn-outline-success btn-sm" onclick="openPayModel(event)">
         Pay Fees
       </a>
 
@@ -502,6 +502,19 @@ body {
   </div>
 </section>
 
+<!-- GPAY FEES MODAL -->
+<div id="payModal" class="pay-modal">
+  <div class="pay-card">
+    <span class="close-btn" onclick="closePayModal()">×</span>
+
+    <h3>Pay Fees via UPI</h3>
+
+    <img src="images/gpay-qr.jpeg" alt="GPay QR">
+
+    <p class="upi-id"><strong>UPI ID:</strong> preetimaurya236@okaxis</p>
+    <small>Scan to pay with any UPI app</small>
+  </div>
+</div>
 
 <!-- FOOTER START -->
 <footer class="main-footer">
@@ -728,6 +741,7 @@ document.addEventListener("keydown", function (event) {
 </script>
 </body>
 </html>
+
 
 
 
