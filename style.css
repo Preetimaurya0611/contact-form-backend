@@ -757,32 +757,6 @@ textarea:focus{
   display: block;
 }   
 
-/* GPAY QR */
-
-.pay-wrapper{
-  position: relative;
-  display: inline-block;
-}
-
-.gpay-qr-popup{
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 220px;
-  background: #fff;
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  text-align: center;
-  display: none;
-  z-index: 3000;
-}
-
-.pay-wrapper:hover .gpay-qr-popup{
-  display: block;
-}
-
 /* ================= FULL SCREEN PAY MODAL ================= */
 
 .pay-modal{
@@ -832,6 +806,7 @@ textarea:focus{
   to{ transform: scale(1); opacity:1 }
 }
 
+
 /* ================= REQUIRED STAR ================= */
 
 .required{
@@ -868,6 +843,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
