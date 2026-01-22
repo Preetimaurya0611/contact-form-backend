@@ -246,6 +246,9 @@ label{
 
 .footer-col.social-col{
   grid-column: span 3;  
+  display:flex;             
+  flex-direction:column;
+  align-items:center;
 }
 
 /* SOCIAL */
@@ -254,7 +257,7 @@ label{
   padding:0;
   margin-top:15px;
   display:flex;             
-  gap:40px;                
+  gap:35px;                
   align-items:center;
   flex-wrap: nowrap;  
   justify-content: center;
@@ -896,6 +899,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
