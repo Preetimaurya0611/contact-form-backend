@@ -201,18 +201,17 @@ label{
   margin-bottom:10px; 
 }
 
-
-/* ================= FOOTER ================= */
+/* ================= FOOTER (FINAL & CLEAN) ================= */
 
 .main-footer{
   background:#1f355d;
   color:#ffffff;
   padding:70px 40px 30px;
   font-family: Arial, sans-serif;
-  overflow-x:auto;
-  overflow-y:hidden;
+  overflow-x:hidden;
 }
 
+/* GRID */
 .footer-grid{
   display:grid;
   grid-template-columns: 1.3fr 1fr 1.4fr 1fr;
@@ -220,9 +219,15 @@ label{
   align-items:start;
 }
 
+/* COMMON */
 .footer-col h3{
   margin-bottom:25px;
   font-size:24px;
+}
+
+.footer-col p{
+  font-size:15px;
+  line-height:1.8;
 }
 
 .college-name{
@@ -231,11 +236,7 @@ label{
   margin-bottom:15px;
 }
 
-.footer-col p{
-  line-height:1.8;
-  font-size:15px;
-}
-
+/* LINKS */
 .footer-links{
   list-style:none;
   padding:0;
@@ -247,37 +248,27 @@ label{
   font-size:17px;
 }
 
-.footer-col.social-col{
-  grid-column: auto;  
-  display:block;            
-}
+/* ================= SOCIAL (FIXED) ================= */
 
-/* SOCIAL */
-.social-links{
-  list-style:none;
-  padding:0;
+.footer-social{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap;
   margin-top:15px;
-  display:flex;
-  flex-wrap:nowrap;
-  align-items:center;
-  justify-content:flex-start;
-  gap:20px;
-
-  white-space:nowrap;
-  min-width:720px;
 }
 
-.social-links li{
+.footer-social a{
   display:flex;
   align-items:center;
-  gap:12px;
-  margin-bottom:0;
-  font-size:17px;
-  white-space: nowrap;
+  gap:10px;
+  text-decoration:none;
   color:#ffcc00;
+  font-size:16px;
+  white-space:nowrap;
 }
 
-.social-links i{
+.footer-social i{
   width:40px;
   height:40px;
   border-radius:50%;
@@ -288,18 +279,15 @@ label{
   font-size:18px;
 }
 
-/* Icon Colors */
+/* ICON COLORS */
 .fb{background:#1877f2;}
-.tw{background:#000;}
+.tw{background:#000000;}
 .yt{background:#ff0000;}
 .ig{background:#e1306c;}
 .ln{background:#0a66c2;}
 
-.highlight{
-  color:#ffcc00;
-}
+/* ================= BOTTOM ================= */
 
-/* BOTTOM */
 .footer-bottom{
   border-top:1px solid #405a88;
   margin-top:50px;
@@ -316,9 +304,29 @@ label{
   font-weight:bold;
 }
 
+/* FULL WIDTH */
 .main-footer .container{
   max-width:100% !important;
   width:100% !important;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px){
+  .footer-grid{
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+  }
+}
+
+@media (max-width: 576px){
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social{
+    gap:18px;
+  }
 }
 
 /* ================= EXAM ANNOUNCEMENT ================= */
@@ -908,6 +916,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
