@@ -296,8 +296,8 @@ label{
 .footer-social{
   display:flex;
   align-items:center;
-  gap:22px;
-  flex-wrap:wrap;
+  gap:28px;
+  flex-wrap:nowrap;
   margin-top:15px;
 }
 
@@ -328,6 +328,11 @@ label{
 .footer-social .ig{background:#e1306c;}
 .footer-social .ln{background:#0a66c2;}
 
+@media (max-width:768px){
+  .footer-social{
+    flex-wrap:wrap;
+  }
+}
 
 /* ================= EXAM ANNOUNCEMENT ================= */
 
@@ -916,6 +921,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
