@@ -294,10 +294,10 @@ label{
 /* === FORCE SOCIAL ICON FIX === */
 
 .footer-social{
-  display:flex;
-  align-items:flex-start;
-  gap:16px;
-  flex-direction:column;
+  display:flex !important;
+  align-items:flex-start !important;
+  gap:16px !important;
+  flex-direction:column !important;
   margin-top:15px;
 }
 
@@ -921,6 +921,7 @@ textarea:focus{
 
 /* RESPONSIVE */
 @media(max-width:768px){ .hero h1{font-size:30px;} .form-card{padding:25px;} .nav-link{margin-left:0;} }
+
 
 
 
