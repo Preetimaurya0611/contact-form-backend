@@ -686,11 +686,32 @@ function checkBackend() {
     });
 }
 
+// ===== LOAD NOTES FROM BACKEND (AUTO) =====
+fetch("https://college-portal-backend-08kj.onrender.com/api/notes")
+  .then(res => res.json())
+  .then(notes => {
+    const list = document.getElementById("notesList");
+    if (!list) return;
 
+    list.innerHTML = "";
+
+    notes.forEach(note => {
+      const li = document.createElement("li");
+      li.className = "list-group-item";
+      li.innerText = note.subject + " - " + note.title;
+      list.appendChild(li);
+    });
+  })
+  .catch(err => {
+    const list = document.getElementById("notesList");
+    if (list) list.innerText = "Notes load nahi ho paaye";
+    console.error(err);
+  });
 
 </script>
 </body>
 </html>
+
 
 
 
