@@ -668,25 +668,23 @@ function checkBackend() {
   const result = document.getElementById("backendResult");
   result.innerText = "Checking backend...";
 
-  fetch("https://college-portal-backend-08kj.onrender.com/")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
+  fetch("https://college-portal-backend-08kj.onrender.com/api/test")
+    .then(res => res.json())
     .then(data => {
       result.innerText = data.message;
     })
-    .catch(error => {
+    .catch(err => {
       result.innerText = "Backend not reachable";
-      console.error(error);
+      console.error("ERROR:", err);
     });
 }
+
+
 
 </script>
 </body>
 </html>
+
 
 
 
