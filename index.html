@@ -577,11 +577,6 @@ body {
   </div>
 </div>
 
-<h2>Backend Connection Test</h2>
-
-<button onclick="checkBackend()">Check Backend</button>
-
-<p id="backendResult"></p>
   
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -670,21 +665,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Backend
-  
-function checkBackend() {
-  const result = document.getElementById("backendResult");
-  result.innerText = "Checking backend...";
-
-  fetch("https://college-portal-backend-08kj.onrender.com/api/test")
-    .then(res => res.json())
-    .then(data => {
-      result.innerText = data.message;
-    })
-    .catch(err => {
-      result.innerText = "Backend not reachable";
-      console.error("ERROR:", err);
-    });
-}
 
 // ===== LOAD NOTES FROM BACKEND (AUTO) =====
   document.addEventListener("DOMContentLoaded", function () {
