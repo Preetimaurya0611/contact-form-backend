@@ -520,12 +520,12 @@ body {
   <button type="button" class="btn-close" onclick="closeEnquiry()"></button>
 </div>
 <div class="popup-body">
-    <form>
+    <form id="enquiryForm">
       <div class="form-group">
         <label>Full Name*</label>
         <div class="input-box">
           <i class="fa-solid fa-user"></i>
-          <input type="text" required>
+          <input type="text" name="name" required>
         </div>
       </div>
 
@@ -533,7 +533,7 @@ body {
         <label>Email*</label>
         <div class="input-box">
           <i class="fa-solid fa-envelope"></i>
-          <input type="email" required>
+          <input type="email" name="email" required>
         </div>
       </div>
 
@@ -541,7 +541,7 @@ body {
         <label>Phone*</label>
         <div class="input-box">
           <i class="fa-solid fa-phone"></i>
-          <input type="text" required>
+          <input type="text" name="phone" required>
         </div>
       </div>
 
@@ -550,7 +550,7 @@ body {
 
         <div class="form-group">
           <div class="input-box">
-            <select required>
+            <select name="level" required>
               <option value="">Select Level</option>
               <option>UG</option>
               <option>PG</option>
@@ -561,7 +561,7 @@ body {
 
         <div class="form-group">
           <div class="input-box">
-            <select required>
+            <select name="course" required>
               <option value="">Select Course</option>
               <option>BSc IT</option>
               <option>BCom</option>
@@ -693,6 +693,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </body>
 </html>
+
 
 
 
